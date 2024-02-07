@@ -3,11 +3,12 @@ const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 
 const userServices = require('../services/userServices');
+const config = require('../config');
 
 const authRoutes = express.Router();
 
-const secretKey = process.env.SECRET_KEY;
-const tokenDuration = process.env.TOKEN_DURATION;
+const secretKey = config.SECRET_KEY;
+const tokenDuration = config.TOKEN_DURATION;
 
 authRoutes.post('/login', async (req, res) => {
   const { username, password } = req.body;

@@ -1,6 +1,6 @@
 FROM node:16.17.1
 
-WORKDIR /code
+WORKDIR /app
 
 ADD package.json .
 ADD yarn.lock .
