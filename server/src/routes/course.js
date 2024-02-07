@@ -5,7 +5,7 @@ const courseServices = require('../services/courseServices');
 
 const courseRoutes = express.Router();
 
-courseRoutes.use(authMiddleware);
+// courseRoutes.use(authMiddleware);
 
 courseRoutes.post('/courses/:id/enroll', (req, res) => {
   res.json({ message: 'Enrolled in the course' });
